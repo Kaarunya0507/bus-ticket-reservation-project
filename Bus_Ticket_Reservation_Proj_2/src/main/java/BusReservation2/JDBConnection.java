@@ -8,7 +8,7 @@ public class JDBConnection {
 	
 	private static final String url = "jdbc:mysql://localhost:3306/BusReservationPro";
 	private static final String userName = "root";
-	private static final String passWord = "karthi9952";
+	private static final String passWord = "kaaru2005";
 
 
 	public static Connection getConnection() throws SQLException, ClassNotFoundException {
