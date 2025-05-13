@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sign Up</title>
+<style type="text/css">
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(img/Login2_bg.avif);
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+header{
+            position: fixed;
+            width: 100%;
+            top:0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.542);
+            height:60px;
+        }
+
+.container {
+    font-family: serif;
+    font-size: 18px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.box {
+    background-color:  rgba(255, 255, 255, 0.235);
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    padding: 20px;
+}
+
+
+table {
+    margin: auto;
+    width: 100%;
+}
+
+td {
+    margin: 5px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#submit {
+    background: rgb(0, 140, 255) ;
+    text-shadow: 0 0 4px white;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: white;
+    color: rgb(0, 140, 255);
+    box-shadow: 0 0 7px rgb(0, 140, 255) ;
+    text-shadow: 0 0 7px rgb(0, 140, 255);
+}
+
+
+h1 {
+    text-align: center;
+    color: rgb(0, 21, 255);
+    text-shadow: 0 0 4px rgb(255, 255, 255);
+}
+
+
+a {
+    text-decoration: none;
+    color: rgb(0, 150, 255);
+    font-weight: bold;
+}
+
+a:hover {
+    color: white;
+    text-shadow: 0 0 7px rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 768px) {
+    .box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    td {
+        display: block;
+        text-align: left;
+    }
+}
+</style>
+<script type="text/javascript">
+function check() {
+	if(document.signup.password.value != document.signup.cpassword.value){
+		alert("Please enter a password and confirm password are same .");
+		return false;
+	}
+	if(document.signup.username.value == "" || document.signup.password.value == "" ){
+		alert("Please enter form ")
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+<header>
+        <div class="logo"><img src="img/logo.png" width="80" height="80" ></div> 
+    </header>
+<div class="container">
+<div class="box">
+<div class="content">
+<h1>SignUp</h1>
+<form action="SignupPage" method="post" name="signup" onsubmit="return check()">
+<table>
+<tr>
+<td>User Name </td>
+<td><input type="text" name="username" id="username" placeholder="Enter your user id"></td>
+</tr>
+<tr>
+<td>Password </td>
+<td><input type="password" name="password" id="password" placeholder="Enter your password"></td>
+</tr>
+<tr>
+<td>Confirm Password </td>
+<td><input type="password" name="cpassword" id="cpassword" placeholder="Enter your password again"></td>
+</tr>
+<tr>
+<td colspan="2"><input type="submit" name="submit" id="submit" value="Sign up"></td>
+<td></td>
+</tr>
+</table>
+</form>
+<br>
+<table>
+<tr>
+<td></td>
+<td><a href="LoginPage.html">Login</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>
